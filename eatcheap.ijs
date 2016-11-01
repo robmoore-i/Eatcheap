@@ -8,7 +8,7 @@ NB. Necassary calories per meal
 caloriesPerMeal =: 1000 
 
 NB. =============== FoodType objects =======================
-NB. Constituent types
+NB. Main macronutrient of the food
 CARBS =: 0
 PROTEIN =: 1
 FAT =: 2
@@ -16,7 +16,7 @@ FRUITVEG =: 3
 
 NB. =============== Food objects =======================
 
-NB. Food values: £££PerUnit servingsPerUnit proteinPerServing caloriesPerServing consituentType
+NB. Food values: £££PerUnit servingsPerUnit proteinPerServing caloriesPerServing foodType
 
 NB. 	      ££   srv prtn cals type
 NB. Carbs
@@ -42,7 +42,7 @@ NB. Protein per serving
 protein =: 2&{
 NB. Calories per serving
 calories =: 3&{
-NB. Main macronutrient of the food
+NB. The FoodType
 constituentType =: 4&{ 
 
 NB. £££ per serving
@@ -54,6 +54,10 @@ caloriesPerPound =: calories % poundsPerServing
 NB. =============== Meal objects =======================
 
 NB. Usage example: basicchilli =: meal rice ,. mince ,. onions ,. tomatosauce
-NB.              ££££££           srv      protein          calories
+
+NB. You might also say: ingredients =: rice ,. mince ,. onions ,. tomatosauce
+NB.	              basicchilli =: meal ingredients
+
+NB.          £££ per serving      srv      protein          calories
 meal =: (+/ @: poundsPerServing) , 1 , (+/ @: protein) , (+/ @: calories)
 
