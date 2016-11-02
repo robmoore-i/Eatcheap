@@ -67,14 +67,16 @@ NB. Usage example: basicchilli =: meal rice ,. mince ,. onions ,. tomatosauce
 NB. You might also say: ingredients =: rice ,. mince ,. onions ,. tomatosauce
 NB.	              basicchilli =: meal ingredients
 
-NB. If I for example have 4 slcies of bread with 2 servings of peanutbutter and 2 servings of butter, I can say:
-NB. meal =: (4 #"0 brownbread) ,. (2 #"0 peanutbutter) ,. (2 #"0 butter)
+NB. If I for example have 4 slices of bread with 2 servings of peanutbutter and 2 servings of butter, I can say:
+NB. meal =: (4 of brownbread) ,. (2 of peanutbutter) ,. (2 of butter)
 NB. This meal is unspeakably efficient by the way. It's stats are 0.479529 1 30.12 864
 
 NB.          £££ per serving      srv      protein          calories
 meal =: (+/ @: poundsPerServing) , 1 , (+/ @: protein) , (+/ @: calories)
 
-minceandrice =: meal mince ,. rice
+of =: #"0
+
+minceandsweetpotatoes =: meal mince ,. (4 of sweetpotato)
 
 NB. =============== BowlOfCereal objects (implements Meal) =======================
 
@@ -86,6 +88,6 @@ bowlofcocopops =: bowlofcereal cocopops
 NB. =============== Sandwich objects (implements Meal) =======================
 
 NB. Making a sandiwich
-sandwich =: meal @: ((2 #"0 brownbread)&,.)
+sandwich =: meal @: ((2 of brownbread)&,.)
 
 peanutbutterAndButterSandwich =: sandwich peanutbutter ,. butter
