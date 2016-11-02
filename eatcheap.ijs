@@ -7,7 +7,7 @@ mealsPerDay =: 3
 NB. Necassary calories per meal
 caloriesPerMeal =: 1000 
 
-NB. =============== FoodType objects =======================
+NB. =============== FoodType objects (Instances of an enum) =======================
 NB. Main macronutrient of the food
 CARBS =: 0
 PROTEIN =: 1
@@ -69,13 +69,23 @@ NB.	              basicchilli =: meal ingredients
 
 NB. If I for example have 4 slcies of bread with 2 servings of peanutbutter and 2 servings of butter, I can say:
 NB. meal =: (4 #"0 brownbread) ,. (2 #"0 peanutbutter) ,. (2 #"0 butter)
-NB. This meal is unspeakably efficient. It's stats are 0.479529 1 30.12 864
+NB. This meal is unspeakably efficient by the way. It's stats are 0.479529 1 30.12 864
 
 NB.          £££ per serving      srv      protein          calories
 meal =: (+/ @: poundsPerServing) , 1 , (+/ @: protein) , (+/ @: calories)
 
+minceandrice =: meal mince ,. rice
+
+NB. =============== BowlOfCereal objects (implements Meal) =======================
+
+NB. Making a bowl of some cereal
+bowlofcereal =: meal @: (milk&,.)
+
+bowlofcocopops =: bowlofcereal cocopops
+
+NB. =============== Sandwich objects (implements Meal) =======================
+
 NB. Making a sandiwich
 sandwich =: meal @: ((2 #"0 brownbread)&,.)
 
-NB. Common instances of meal:
 peanutbutterAndButterSandwich =: sandwich peanutbutter ,. butter
