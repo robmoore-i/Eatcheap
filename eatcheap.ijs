@@ -13,6 +13,7 @@ CARBS =: 0
 PROTEIN =: 1
 FAT =: 2
 FRUITVEG =: 3
+MIXTURE =: 4
 
 NB. =============== Food objects =======================
 
@@ -20,7 +21,7 @@ NB. Food values: £££PerUnit servingsPerUnit proteinPerServing caloriesPerServ
 
 NB. 	      ££   srv prtn cals type
 NB. Carbs
-rice =: 	      15,   83,  4.7,  211, CARBS
+rice =: 	      13,   83,  4.7,  211, CARBS
 cocopops =:     1.5,  10,  1.7,  117, CARBS
 cornflakes =:   1.84, 15,  2.1,  113, CARBS
 brownbread =:   0.8 , 17,  2.5,  55 , CARBS
@@ -62,32 +63,34 @@ proteinPerPound =: protein % poundsPerServing
 
 NB. =============== Meal objects =======================
 
-NB. Usage example: basicchilli =: meal rice ,. mince ,. onions ,. tomatosauce
+NB. Usage example: basicchilli =: meal rice and mince and onions and tomatosauce
 
-NB. You might also say: ingredients =: rice ,. mince ,. onions ,. tomatosauce
+NB. You might also say: ingredients =: rice and mince and onions and tomatosauce
 NB.	              basicchilli =: meal ingredients
 
 NB. If I for example have 4 slices of bread with 2 servings of peanutbutter and 2 servings of butter, I can say:
-NB. meal =: (4 of brownbread) ,. (2 of peanutbutter) ,. (2 of butter)
+NB. meal =: (4 of brownbread) and (2 of peanutbutter) and (2 of butter)
 NB. This meal is unspeakably efficient by the way. It's stats are 0.479529 1 30.12 864
 
-NB.          £££ per serving      srv      protein          calories
-meal =: (+/ @: poundsPerServing) , 1 , (+/ @: protein) , (+/ @: calories)
+NB.                  £££ per serving      srv      protein          calories      foodType (mixture)
+meal =: ,&4 @: ((+/ @: poundsPerServing) , 1 , (+/ @: protein) , (+/ @: calories)) NB. 4
 
 of =: #"0
 
-minceandsweetpotatoes =: meal mince ,. (4 of sweetpotato)
+and =: ,.
+
+minceandsweetpotatoes =: meal mince and (4 of sweetpotato)
 
 NB. =============== BowlOfCereal objects (implements Meal) =======================
 
 NB. Making a bowl of some cereal
-bowlofcereal =: meal @: (milk&,.)
+bowlofcereal =: meal @: (milk&and)
 
 bowlofcocopops =: bowlofcereal cocopops
 
 NB. =============== Sandwich objects (implements Meal) =======================
 
 NB. Making a sandiwich
-sandwich =: meal @: ((2 of brownbread)&,.)
+sandwich =: meal @: ((2 of brownbread)&and)
 
-peanutbutterAndButterSandwich =: sandwich peanutbutter ,. butter
+peanutbutterAndButterSandwich =: sandwich peanutbutter and butter
