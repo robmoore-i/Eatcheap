@@ -61,6 +61,9 @@ caloriesPerPound =: calories % poundsPerServing
 NB. Protein per £££
 proteinPerPound =: protein % poundsPerServing
 
+NB. Shows you the price a food (x) would have to be for it to have equal calories per £££ as another food (y)
+moreCalorieEfficient =: caloriesPerPound@:[ > caloriesPerPound@:]
+
 NB. =============== Meal objects =======================
 
 NB. Usage example: basicchilli =: meal rice and mince and onions and tomatosauce
