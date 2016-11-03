@@ -13,7 +13,8 @@ CARBS =: 0
 PROTEIN =: 1
 FAT =: 2
 FRUITVEG =: 3
-MIXTURE =: 4
+SUGAR =: 4
+MIXTURE =: 5
 
 NB. =============== Food objects =======================
 
@@ -21,24 +22,28 @@ NB. Food values: £££PerUnit servingsPerUnit proteinPerServing caloriesPerServ
 
 NB. 	      ££   srv prtn cals type
 NB. Carbs
-rice =: 	      13,   83,  4.7,  211, CARBS
-cocopops =:     1.5,  10,  1.7,  117, CARBS
-cornflakes =:   1.84, 15,  2.1,  113, CARBS
-brownbread =:   0.8 , 17,  2.5,  55 , CARBS
-sweetpotato =:  0.95, 10,  1.2,  98 , CARBS
+rice =: 	      13,   83,  4.7,  211,  CARBS
+cocopops =:     1.5,  10,  1.7,  117,  CARBS
+cornflakes =:   1.84, 15,  2.1,  113,  CARBS
+brownbread =:   0.8 , 17,  2.5,  55 ,  CARBS
+sweetpotato =:  0.95, 10,  1.2,  98 ,  CARBS
+alpenmuesli =:  1.39, 17,  5,    170,  CARBS
 
 NB. Proteins
-wheypowder =:   26,   13,  20,   129, PROTEIN
-mince =:	      2,    2,   46.2, 588, PROTEIN
+wheypowder =:   26,   13,  20,   129,  PROTEIN
+mince =:	      2,    2,   46.2, 588,  PROTEIN
 
 NB. Fats
-milk =: 	      1,    11 , 6.8,  138, FAT
-peanutbutter =: 1,    8.5, 10 ,  248, FAT
-sunfloweroil =: 0.6,  30,  0,    135, FAT
-butter =: 	      0.7,  25,  0.06, 74,  FAT
+milk =: 	      1,    11 , 6.8,  138,  FAT
+peanutbutter =: 1,    8.5, 10 ,  248,  FAT
+sunfloweroil =: 0.6,  30,  0,    135,  FAT
+butter =: 	      0.7,  25,  0.06, 74,   FAT
 
 NB. Fruit and Veg
-carrots =:      0.35, 2,   1.5, 105, FRUITVEG 
+carrots =:      0.35, 2,   1.5,  105,  FRUITVEG 
+
+NB. Sugar
+honey =:        1.1,  30,  0.1,  37.2, SUGAR 
 
 NB. Accessor methods, each one is "per *whatever the measure is usually considered in terms of*"
 NB. £££ per unit
@@ -62,10 +67,10 @@ NB. Protein per £££
 proteinPerPound =: protein % poundsPerServing
 
 NB. Returns 1 if left argument is more calorie efficient that right argument, 0 otherwise
-moreCalorieEfficient =: caloriesPerPound@:[ > caloriesPerPound@:]
+moreCalorieEfficientThan =: caloriesPerPound@:[ > caloriesPerPound@:]
 
 NB. As above, but for protein efficiency instead
-moreProteinEfficient =: proteinPerPound@:[ > proteinPerPound@:]
+moreProteinEfficientThan =: proteinPerPound@:[ > proteinPerPound@:]
 
 NB. =============== Meal objects =======================
 
