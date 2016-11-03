@@ -61,7 +61,7 @@ caloriesPerPound =: calories % poundsPerServing
 NB. Protein per £££
 proteinPerPound =: protein % poundsPerServing
 
-NB. Shows you the price a food (x) would have to be for it to have equal calories per £££ as another food (y)
+NB. Returns 1 if left argument is more calorie efficient that right argument, 0 otherwise
 moreCalorieEfficient =: caloriesPerPound@:[ > caloriesPerPound@:]
 
 NB. =============== Meal objects =======================
