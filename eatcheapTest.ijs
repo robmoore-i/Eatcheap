@@ -22,16 +22,30 @@ testfood =. 1 2 20 0 0
 canCompareCalorieEfficiencyOfFoods =: 0 : 0
 testfood1 =. 1 2 0 20 0
 testfood2 =. 2 3 0 10 0
+testfood3 =. 2 4 0 20 0
+'canCompareCalorieEfficiencyOfFoods'
 (testfood1 moreCalorieEfficient testfood2) shouldEqual 1
 (testfood2 moreCalorieEfficient testfood1) shouldEqual 0
+(testfood1 moreCalorieEfficient testfood3) shouldEqual 0
+)
+
+canCompareProteinEfficiencyOfFoods =: 0 : 0
+testfood1 =. 1 2 5 200 0
+testfood2 =. 2 5 10 50 1
+testfood3 =. 2 4 5 200 0
+'canCompareProteinEfficiencyOfFoods'
+(testfood1 moreProteinEfficient testfood2) shouldEqual 0
+(testfood2 moreProteinEfficient testfood1) shouldEqual 1
+(testfood1 moreProteinEfficient testfood3) shouldEqual 0
 )
 
 canCorrectlyCombineFoodsIntoMeals =: 0 : 0
 testfood1 =. 1 2 5 200 0
 testfood2 =. 2 5 10 50 1
+'canCorrectlyCombineFoodsIntoMeals'
 (meal (2 of testfood1) and testfood2) shouldEqual (1.4 1 20 450 4)
 )
 
-jt =: runTests canCalculatePoundsPerServing ; canCalculateCaloriesPerPound ; canCalculateProteinPerPound ; canCompareCalorieEfficiencyOfFoods ; canCorrectlyCombineFoodsIntoMeals
+jt =: runTests canCalculatePoundsPerServing ; canCalculateCaloriesPerPound ; canCalculateProteinPerPound ; canCompareCalorieEfficiencyOfFoods ; canCompareProteinEfficiencyOfFoods ; canCorrectlyCombineFoodsIntoMeals
 
 

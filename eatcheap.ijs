@@ -64,6 +64,9 @@ proteinPerPound =: protein % poundsPerServing
 NB. Returns 1 if left argument is more calorie efficient that right argument, 0 otherwise
 moreCalorieEfficient =: caloriesPerPound@:[ > caloriesPerPound@:]
 
+NB. As above, but for protein efficiency instead
+moreProteinEfficient =: proteinPerPound@:[ > proteinPerPound@:]
+
 NB. =============== Meal objects =======================
 
 NB. Usage example: basicchilli =: meal rice and mince and onions and tomatosauce
