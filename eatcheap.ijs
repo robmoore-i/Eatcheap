@@ -20,30 +20,32 @@ NB. =============== Food objects =======================
 
 NB. Food values: £££PerUnit servingsPerUnit proteinPerServing caloriesPerServing foodType
 
-NB. 	      ££   srv prtn cals type
+NB. 	       ££   srv  prtn  cals type
 NB. Carbs
-rice =: 	      13,   83,  4.7,  211,  CARBS
-cocopops =:     1.5,  10,  1.7,  117,  CARBS
-cornflakes =:   1.84, 15,  2.1,  113,  CARBS
-brownbread =:   0.8 , 17,  2.5,  55 ,  CARBS
-sweetpotato =:  0.95, 10,  1.2,  98 ,  CARBS
-alpenmuesli =:  1.39, 17,  5,    170,  CARBS
+rice =: 	       13,   83,  4.7,  211,  CARBS
+cocopops =:      1.5,  10,  1.7,  117,  CARBS
+cornflakes =:    1.84, 15,  2.1,  113,  CARBS
+brownbread =:    0.8 , 17,  2.5,  55 ,  CARBS
+sweetpotato =:   0.95, 10,  1.2,  98 ,  CARBS
+alpen =:   1.39, 17,  5,    170,  CARBS
 
 NB. Proteins
-wheypowder =:   26,   13,  20,   129,  PROTEIN
-mince =:	      2,    2,   46.2, 588,  PROTEIN
+wheypowder =:    26,   13,  20,   129,  PROTEIN
+mince =:	       2,    2,   46.2, 588,  PROTEIN
+chailatte =:     1.4,  12,  1.5,  90,   PROTEIN
+chickenthighs =: 2.25, 2,   52.8, 690,  PROTEIN
 
 NB. Fats
-milk =: 	      1,    11 , 6.8,  138,  FAT
-peanutbutter =: 1,    8.5, 10 ,  248,  FAT
-sunfloweroil =: 0.6,  30,  0,    135,  FAT
-butter =: 	      0.7,  25,  0.06, 74,   FAT
+milk =: 	       1,    11 , 6.8,  138,  FAT
+peanutbutter =:  1,    8.5, 10 ,  248,  FAT
+sunfloweroil =:  0.6,  30,  0,    135,  FAT
+butter =: 	       0.7,  25,  0.06, 74,   FAT
 
 NB. Fruit and Veg
-carrots =:      0.35, 2,   1.5,  105,  FRUITVEG 
+carrots =:       0.35, 2,   1.5,  105,  FRUITVEG 
 
 NB. Sugar
-honey =:        1.1,  30,  0.1,  37.2, SUGAR 
+honey =:         1.1,  30,  0.1,  37.2, SUGAR 
 
 NB. Accessor methods, each one is "per *whatever the measure is usually considered in terms of*"
 NB. £££ per unit
@@ -81,7 +83,7 @@ NB.	              basicchilli =: meal ingredients
 
 NB. If I for example have 4 slices of bread with 2 servings of peanutbutter and 2 servings of butter, I can say:
 NB. meal =: (4 of brownbread) and (2 of peanutbutter) and (2 of butter)
-NB. This meal is unspeakably efficient by the way. It's stats are 0.479529 1 30.12 864
+NB. This meal is amazingly efficient by the way. It's stats are 0.479529 1 30.12 864
 
 NB.                  £££ per serving      srv      protein          calories      foodType (mixture)
 meal =: ,&4 @: ((+/ @: poundsPerServing) , 1 , (+/ @: protein) , (+/ @: calories)) NB. 4
@@ -90,14 +92,14 @@ of =: #"0
 
 and =: ,.
 
-minceandsweetpotatoes =: meal mince and (4 of sweetpotato)
+proteinshake =: meal wheypowder and (5 of milk) 
 
 NB. =============== BowlOfCereal objects (implements Meal) =======================
 
 NB. Making a bowl of some cereal
 bowlofcereal =: meal @: (milk&and)
 
-bowlofcocopops =: bowlofcereal cocopops
+bowlofalpen =: bowlofcereal alpen
 
 NB. =============== Sandwich objects (implements Meal) =======================
 
