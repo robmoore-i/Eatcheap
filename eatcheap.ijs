@@ -33,7 +33,7 @@ NB. Proteins
 wheypowder =:    26,   13,  20,   129,  PROTEIN
 mince =:	       2,    2,   46.2, 588,  PROTEIN
 chailatte =:     1.4,  12,  1.5,  90,   PROTEIN
-chickenthighs =: 2.25, 2,   52.8, 690,  PROTEIN
+chickenthighs =: 2.25, 2,   45.1, 588,  PROTEIN
 
 NB. Fats
 milk =: 	       1,    11 , 6.8,  138,  FAT
