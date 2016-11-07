@@ -12,9 +12,9 @@ NB. Main macronutrient of the food
 CARBS =: 0
 PROTEIN =: 1
 FAT =: 2
-FRUITVEG =: 3
-SUGAR =: 4
-MIXTURE =: 5
+SUGAR =: 3
+MIXTURE =: 4
+FRUITVEG =: 5
 
 NB. =============== Food objects =======================
 
@@ -42,7 +42,8 @@ sunfloweroil =:  0.6,  30,  0,    135,  FAT
 butter =: 	       0.7,  25,  0.06, 74,   FAT
 
 NB. Fruit and Veg
-carrots =:       0.35, 2,   1.5,  105,  FRUITVEG 
+carrots =:       0.35, 2,   1.5,  105,  FRUITVEG
+pepper =:  0.85, 3,   1.8,  50,   FRUITVEG
 
 NB. Sugar
 honey =:         1.1,  30,  0.1,  37.2, SUGAR 
@@ -107,3 +108,32 @@ NB. Making a sandiwich
 sandwich =: meal @: ((2 of brownbread)&and)
 
 peanutbutterAndButterSandwich =: sandwich peanutbutter and butter
+
+NB. =============== Tabling functions =======================
+
+rowlabels =: 'unit price;' , 'servings per unit;' , 'protein (g) per serving;' , 'calories per serving;' , 'food type;'
+
+foods =: (('cocopops' ,: 'cornflakes') , 'rice') , 'sweetpotato'
+
+getTopRow =: 3 : 0
+(< ;. _2) (, (,&';'"1 ('name' , y)))
+)
+
+getData =: <@:,."1@:".
+
+getTableWidth =: >:@:#
+
+getTableDimensions =: 2&,@:getTableWidth
+
+getLabels =: (< ([ ;. _2) rowlabels)
+
+cocopopsVScornflakes =: (getTableDimensions foods) $ (getTopRow foods) , getLabels , (getData foods)
+
+getTableBody =: 3 : 0
+(getTopRow y) , getLabels , (getData y)
+)
+
+maketable =: getTableDimensions $ getTableBody
+
+
+
