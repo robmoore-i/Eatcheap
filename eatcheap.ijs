@@ -124,6 +124,7 @@ tablebody =: columnlabels , rowlabels , data
 
 maketable =: tabledimensions $ tablebody
 
-foods =: (('cocopops' ,: 'cornflakes') , 'alpen')
+entries =: 'cocopops;' , 'cornflakes;' , 'alpen;'
+foods =: ([ ;. _2) entries
 
 compareCereals =: maketable foods
