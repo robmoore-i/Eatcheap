@@ -122,9 +122,10 @@ data =: <@:,."1@:".
 
 tablebody =: columnlabels , rowlabels , data
 
-maketable =: tabledimensions $ tablebody
+parseinput =: ([ ;. _2)
 
-entries =: 'cocopops;' , 'cornflakes;' , 'alpen;'
-foods =: ([ ;. _2) entries
+maketable =: (tabledimensions $ tablebody) @: parseinput
 
-compareCereals =: maketable foods
+cereals =: 'cocopops;cornflakes;alpen;'
+
+compareCereals =: maketable cereals
