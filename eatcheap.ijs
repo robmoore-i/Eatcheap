@@ -111,25 +111,18 @@ peanutbutterAndButterSandwich =: sandwich peanutbutter and butter
 
 NB. =============== Tabling functions =======================
 
-rowlabels =: 'unit price;' , 'servings per unit;' , 'protein (g) per serving;' , 'calories per serving;' , 'food type;'
+tabledimensions =: 2&,@:(>:@:#)
 
-getTopRow =: 3 : 0
-(< ;. _2) (, (,&';'"1 ('name' , y)))
-)
+columnlabels =: [: <;._2 [: , [: ,&';'"1 'name' , ]
 
-getData =: <@:,."1@:".
+rowlabelnames =: 'unit price;' , 'servings per unit;' , 'protein (g) per serving;' , 'calories per serving;' , 'food type;'
+rowlabels =: (< ([ ;. _2) rowlabelnames)
 
-getTableWidth =: >:@:#
+data =: <@:,."1@:".
 
-getTableDimensions =: 2&,@:getTableWidth
+tablebody =: columnlabels , rowlabels , data
 
-getLabels =: (< ([ ;. _2) rowlabels)
-
-getTableBody =: 3 : 0
-(getTopRow y) , getLabels , (getData y)
-)
-
-maketable =: getTableDimensions $ getTableBody
+maketable =: tabledimensions $ tablebody
 
 foods =: (('cocopops' ,: 'cornflakes') , 'alpen')
 
