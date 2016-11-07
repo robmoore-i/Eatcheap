@@ -115,7 +115,7 @@ tabledimensions =: 2&,@:(>:@:#)
 
 columnlabels =: [: <;._2 [: , [: ,&';'"1 'name' , ]
 
-rowlabelnames =: 'unit price;' , 'servings per unit;' , 'protein (g) per serving;' , 'calories per serving;' , 'food type;'
+rowlabelnames =: 'unit price;servings per unit;protein (g) per serving;calories per serving;food type;'
 rowlabels =: (< ([ ;. _2) rowlabelnames)
 
 data =: <@:,."1@:".
