@@ -113,8 +113,6 @@ NB. =============== Tabling functions =======================
 
 rowlabels =: 'unit price;' , 'servings per unit;' , 'protein (g) per serving;' , 'calories per serving;' , 'food type;'
 
-foods =: (('cocopops' ,: 'cornflakes') , 'rice') , 'sweetpotato'
-
 getTopRow =: 3 : 0
 (< ;. _2) (, (,&';'"1 ('name' , y)))
 )
@@ -127,13 +125,12 @@ getTableDimensions =: 2&,@:getTableWidth
 
 getLabels =: (< ([ ;. _2) rowlabels)
 
-cocopopsVScornflakes =: (getTableDimensions foods) $ (getTopRow foods) , getLabels , (getData foods)
-
 getTableBody =: 3 : 0
 (getTopRow y) , getLabels , (getData y)
 )
 
 maketable =: getTableDimensions $ getTableBody
 
+foods =: (('cocopops' ,: 'cornflakes') , 'alpen')
 
-
+compareCereals =: maketable foods
