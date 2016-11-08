@@ -27,7 +27,7 @@ cocopops =:      1.5,  10,  1.7,  117,  CARBS
 cornflakes =:    1.84, 15,  2.1,  113,  CARBS
 brownbread =:    0.8 , 17,  2.5,  55 ,  CARBS
 sweetpotato =:   0.95, 10,  1.2,  98 ,  CARBS
-alpen =:   1.39, 17,  5,    170,  CARBS
+alpen =:         1.39, 17,  5,    170,  CARBS
 
 NB. Proteins
 wheypowder =:    26,   13,  20,   129,  PROTEIN
@@ -115,17 +115,19 @@ tabledimensions =: 2&,@:(>:@:#)
 
 columnlabels =: [: <;._2 [: , [: ,&';'"1 'name' , ]
 
-rowlabelnames =: 'unit price;servings per unit;protein (g) per serving;calories per serving;food type;'
+rowlabelnames =: 'unit price;servings per unit;protein (g)/serving;calories/serving;food type;'
 rowlabels =: (< ([ ;. _2) rowlabelnames)
 
 data =: <@:,."1@:".
 
 tablebody =: columnlabels , rowlabels , data
 
-parseinput =: ([ ;. _2)
+parseinput =: ([ ;. _2) @: ,&';'
 
 maketable =: (tabledimensions $ tablebody) @: parseinput
 
-cereals =: 'cocopops;cornflakes;alpen;'
+with =: [ , ';' , ]
+
+cereals =: 'cocopops' with 'cornflakes' with 'alpen'
 
 compareCereals =: maketable cereals
