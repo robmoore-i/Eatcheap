@@ -42,17 +42,17 @@ bowlofcereal x
 
 Equivilant to 'meal milk and x'
 
-Example: bowlofcereal cocopops
+Example- bowlofcereal cocopops
 
-Meaning: meal milk and cocopops
+Meaning- meal milk and cocopops
 ==================================
 sandwich
 
 Equivilant to 'meal (2 of brownbread) and x'
 
-Example: sandwich peanutbutter
+Example- sandwich peanutbutter
 
-Meaning: meal (2 of brownbread) and peanutbutter
+Meaning- meal (2 of brownbread) and peanutbutter
 ==================================
 meal x and (n of y) and z
 
@@ -62,15 +62,15 @@ And n is any number, even a decimal if you have maybe half a serving of rice for
 
 This function returns the stats (same meaning as the normal food stats). of the meal resulting in combining the ingredients given. The £££ per unit is worked out as the combined price per serving of each ingredient.
 
-Example: meal rice and mince and (2 of pepper)
+Example- meal rice and mince and (2 of pepper)
 
-Meaning: A meal of rice, mince and 2 peppers.
+Meaning- A meal of rice, mince and 2 peppers.
 ==================================
 maketable x with y with z
 
 Where x, y and z are string eg they are wrapped with single quotes which are code representing meals.
 
-Example: maketable 'cocopops' with 'cornflakes' with 'alpen' with 'meal brownbread and butter'
+Example- maketable 'cocopops' with 'cornflakes' with 'alpen' with 'meal brownbread and butter'
 
-Result: A pretty table showing the stats for each of the different breakfast choices next to each other.
+Result- A pretty table showing the stats for each of the different breakfast choices next to each other.
 ==================================
