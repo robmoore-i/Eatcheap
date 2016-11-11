@@ -1,5 +1,5 @@
 # Eatcheap
-I currently eat for less than £4 per day while living in central London as an athlete who requires a certain amount of protein and calories every day. This is surely what computers were made for.
+I currently eat for less than £4 per day while living in central London as a person who requires a certain amount of protein and calories every day. This is surely what computers were made for.
 
 # Build instructions (from scratch):
 
