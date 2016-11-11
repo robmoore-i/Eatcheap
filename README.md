@@ -3,7 +3,7 @@ I currently eat for less than £4 per day while living in central London as an a
 
 # Build instructions (from scratch):
 
-1. Go to http://www.jsoftware.com/stable.htm and download J804 for windows.
+1. Go to http://www.jsoftware.com/stable.htm and download J804 for your operating system
 
 2. Unzip it wherever you like, but remember where obviously, the folder that is unzipped is called your J home
 
