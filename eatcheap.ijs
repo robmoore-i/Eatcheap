@@ -43,7 +43,7 @@ butter =: 	       0.7,  25,  0.06, 74,   FAT
 
 NB. Fruit and Veg
 carrots =:       0.35, 2,   1.5,  105,  FRUITVEG
-pepper =:  0.85, 3,   1.8,  50,   FRUITVEG
+pepper =:        0.85, 3,   1.8,  50,   FRUITVEG
 
 NB. Sugar
 honey =:         1.1,  30,  0.1,  37.2, SUGAR 
@@ -68,12 +68,6 @@ caloriesPerPound =: calories % poundsPerServing
 
 NB. Protein per £££
 proteinPerPound =: protein % poundsPerServing
-
-NB. Returns 1 if left argument is more calorie efficient that right argument, 0 otherwise
-moreCalorieEfficientThan =: caloriesPerPound@:[ > caloriesPerPound@:]
-
-NB. As above, but for protein efficiency instead
-moreProteinEfficientThan =: proteinPerPound@:[ > proteinPerPound@:]
 
 NB. =============== Meal objects =======================
 
