@@ -1,4 +1,6 @@
-0!:1 < '/home/rob/j64-804-user/projects/eatcheap/foods.ijs'
+jhome =: jpath '~user'
+
+0!:1 < jhome , '/projects/eatcheap/foods.ijs'
 
 NB. =============== FoodType objects (An enum basically) =======================
 NB. Main macronutrient of the food
