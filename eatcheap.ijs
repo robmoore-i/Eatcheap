@@ -9,7 +9,7 @@ mealsPerDay =: 3
 NB. Necassary calories per meal
 caloriesPerMeal =: 1000 
 
-NB. =============== FoodType objects (Instances of an enum) =======================
+NB. =============== FoodType objects (An enum basically) =======================
 NB. Main macronutrient of the food
 CARBS =: 0
 PROTEIN =: 1
@@ -17,6 +17,7 @@ FAT =: 2
 SUGAR =: 3
 MIXTURE =: 4
 FRUITVEG =: 5
+NB. =============== Simple methods on foods =======================
 
 NB. £££ per serving
 poundsPerServing =: pounds % servings
@@ -47,14 +48,14 @@ and =: ,.
 
 proteinshake =: meal wheypowder and (5 of milk) 
 
-NB. =============== BowlOfCereal objects (implements Meal) =======================
+NB. =============== BowlOfCereal =======================
 
 NB. Making a bowl of some cereal
 bowlofcereal =: meal @: (milk&and)
 
 bowlofalpen =: bowlofcereal alpen
 
-NB. =============== Sandwich objects (implements Meal) =======================
+NB. =============== Sandwich =======================
 
 NB. Making a sandiwich
 sandwich =: meal @: ((2 of brownbread)&and)
