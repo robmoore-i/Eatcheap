@@ -21,14 +21,14 @@ I currently eat for &lt;£4 per day while living in central London as an athlete
 
 9. Find the "eatcheap.ijs" file and double click it to open it in the editor (editor is called JQT)
 
-10.At the top there is a button that is like a "play" button. Press it.
+10. At the top there is a button that is like a "play" button. Press it.
 
-11.In the window that you used to open the editor, the little rectangular one with the light brown background, you'll see all the lines of code loaded into the J interpreter.
+11. In the window that you used to open the editor, the little rectangular one with the light brown background, you'll see all the lines of code loaded into the J interpreter.
 
-12.You can now run the program!
-
-# Available functions :
+12. You can now run the program!
 ==================================
+# Available functions :
+
 poundsPerServing x
 
 Where x is a food defined as a list with 5 number elements, representing the £££ per unit (ie cost of box of cornflakes), the number of servings per unit (ie number of bowls of cereal you can get from a box of cornflakes), the protein per serving, the calories per serving and the "food type" which currently has no use... but I will later, to determine the healthiness of meals you know. Carbs+protein+fat+healthyshit=balanced meal.
