@@ -1,7 +1,7 @@
 jhome =: jpath '~user'
 
 0!:1 < jhome , '/projects/Jutl/Jutl.ijs'
-0!:1 < jhome ,  , '/projects/eatcheap/eatcheap.ijs'
+0!:1 < jhome , '/projects/eatcheap/eatcheap.ijs'
 
 canCalculatePoundsPerServing =: 0 : 0
 testfood =. 10 2 0 0 0
