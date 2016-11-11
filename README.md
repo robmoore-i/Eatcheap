@@ -43,6 +43,7 @@ bowlofcereal x
 Equivilant to 'meal milk and x'
 
 Example: bowlofcereal cocopops
+
 Meaning: meal milk and cocopops
 ==================================
 sandwich
@@ -50,6 +51,7 @@ sandwich
 Equivilant to 'meal (2 of brownbread) and x'
 
 Example: sandwich peanutbutter
+
 Meaning: meal (2 of brownbread) and peanutbutter
 ==================================
 meal x and (n of y) and z
@@ -61,6 +63,7 @@ And n is any number, even a decimal if you have maybe half a serving of rice for
 This function returns the stats (same meaning as the normal food stats). of the meal resulting in combining the ingredients given. The £££ per unit is worked out as the combined price per serving of each ingredient.
 
 Example: meal rice and mince and (2 of pepper)
+
 Meaning: A meal of rice, mince and 2 peppers.
 ==================================
 maketable x with y with z
