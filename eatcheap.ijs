@@ -1,14 +1,5 @@
 0!:1 < '/home/rob/j64-804-user/projects/eatcheap/foods.ijs'
 
-NB. Necassary protein per day in grams
-proteinPerDay =: 60
-
-NB. Necassary meals per day
-mealsPerDay =: 3
-
-NB. Necassary calories per meal
-caloriesPerMeal =: 1000 
-
 NB. =============== FoodType objects (An enum basically) =======================
 NB. Main macronutrient of the food
 CARBS =: 0
