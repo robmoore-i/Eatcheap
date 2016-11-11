@@ -25,13 +25,18 @@ I currently eat for less than £4 per day while living in central London as a pe
 
 11. In the window that you used to open the editor, the little rectangular one with the light brown background, you'll see all the lines of code loaded into the J interpreter.
 
-12. You can now run the program!
+12. You can now run the program! Below is usage for the functions
+
 ==================================
-# Available functions :
+# Available functions:
 
 poundsPerServing x
 
 Where x is a food defined as a list with 5 number elements, representing the £££ per unit (ie cost of box of cornflakes), the number of servings per unit (ie number of bowls of cereal you can get from a box of cornflakes), the protein per serving, the calories per serving and the "food type" which currently has no use... but I will later, to determine the healthiness of meals you know. Carbs+protein+fat+healthyshit=balanced meal.
+
+Example- poundsPerServing rice
+
+Result- number of pounds you spend for each serving of rice you get
 
 Returns the number of pounds you spend per serving of the food.
 
