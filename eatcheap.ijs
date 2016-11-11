@@ -10,16 +10,6 @@ FAT =: 2
 SUGAR =: 3
 MIXTURE =: 4
 FRUITVEG =: 5
-NB. =============== Simple methods on foods =======================
-
-NB. £££ per serving
-poundsPerServing =: pounds % servings
-
-NB. Calories per £££
-caloriesPerPound =: calories % poundsPerServing
-
-NB. Protein per £££
-proteinPerPound =: protein % poundsPerServing
 
 NB. =============== Meal objects =======================
 
@@ -61,18 +51,19 @@ tabledimensions =: 2&,@:(>:@:#)
 
 columnlabels =: [: <;._2 [: , [: ,&';'"1 'name' , ]
 
-rowlabelnames =: 'unit price;servings per unit;protein (g)/serving;calories/serving;food type;'
+rowlabelnames =: 'unit price;servings/unit;protein (g)/serving;calories/serving;food type;pounds/serving;protein/pound;calories/pound;'
 rowlabels =: (< ([ ;. _2) rowlabelnames)
 
 data =: <@:,."1@:".
 
 tablebody =: columnlabels , rowlabels , data
 
-parseinput =: ([ ;. _2) @: ,&';'
+adjusttokens =: 'extendfood ' , ';' ,~ ]
+parseinput =: ([ ;. _2) @: adjusttokens
 
 maketable =: (tabledimensions $ tablebody) @: parseinput
 
-with =: [ , ';' , ]
+with =: [ , ';' , 'extendfood ' , ]
 
 cereals =: 'cocopops' with 'cornflakes' with 'alpen'
 

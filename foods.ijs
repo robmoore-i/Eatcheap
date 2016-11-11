@@ -1,4 +1,31 @@
-NB. =============== Food objects =======================
+NB. =============== Food class =======================
+
+NB. Accessor methods, each one is named "per *whatever the measure is usually considered in terms of*"
+NB. £££ per unit
+pounds =: 0&{
+NB. Servings per unit
+servings =: 1&{
+NB. Protein per serving
+protein =: 2&{
+NB. Calories per serving
+calories =: 3&{
+NB. The FoodType
+constituentType =: 4&{
+
+NB. =============== Simple methods on foods ============
+NB. £££ per serving
+poundsPerServing =: pounds % servings
+
+NB. Calories per £££
+caloriesPerPound =: calories % poundsPerServing
+
+NB. Protein per £££
+proteinPerPound =: protein % poundsPerServing
+
+NB. =============== Constructor ============
+extendfood =: ] ,  (poundsPerServing , proteinPerPound , caloriesPerPound)
+
+NB. =============== Instances ============
 
 NB. Food values: £££PerUnit servingsPerUnit proteinPerServing caloriesPerServing foodType
 
@@ -31,15 +58,3 @@ pepper =:         0.85, 3,   1.8,  50,   FRUITVEG
 
 NB. Sugar
 honey =:          1.1,  30,  0.1,  37.2, SUGAR 
-
-NB. Accessor methods, each one is "per *whatever the measure is usually considered in terms of*"
-NB. £££ per unit
-pounds =: 0&{
-NB. Servings per unit
-servings =: 1&{
-NB. Protein per serving
-protein =: 2&{
-NB. Calories per serving
-calories =: 3&{
-NB. The FoodType
-constituentType =: 4&{
