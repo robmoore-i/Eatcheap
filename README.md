@@ -45,6 +45,7 @@ Equivilant to 'meal milk and x'
 Example- bowlofcereal cocopops
 
 Meaning- meal milk and cocopops
+
 ==================================
 sandwich
 
@@ -53,6 +54,7 @@ Equivilant to 'meal (2 of brownbread) and x'
 Example- sandwich peanutbutter
 
 Meaning- meal (2 of brownbread) and peanutbutter
+
 ==================================
 meal x and (n of y) and z
 
@@ -65,6 +67,7 @@ This function returns the stats (same meaning as the normal food stats). of the 
 Example- meal rice and mince and (2 of pepper)
 
 Meaning- A meal of rice, mince and 2 peppers.
+
 ==================================
 maketable x with y with z
 
@@ -73,4 +76,5 @@ Where x, y and z are string eg they are wrapped with single quotes which are cod
 Example- maketable 'cocopops' with 'cornflakes' with 'alpen' with 'meal brownbread and butter'
 
 Result- A pretty table showing the stats for each of the different breakfast choices next to each other.
+
 ==================================
