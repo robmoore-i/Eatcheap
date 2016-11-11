@@ -36,9 +36,7 @@ Where x is a food defined as a list with 5 number elements, representing the Â£Â
 
 Example- poundsPerServing rice
 
-Result- number of pounds you spend for each serving of rice you get
-
-Returns the number of pounds you spend per serving of the food.
+Returns the number of pounds you spend per serving of the food. In the above case, rice
 
 Similar usage for caloriesPerPound and proteinPerPound
 
