@@ -2,7 +2,7 @@ NB. =============== Food objects =======================
 
 NB. Food values: £££PerUnit servingsPerUnit proteinPerServing caloriesPerServing foodType
 
-NB. 	            ££   srv  prtn  cals type
+NB. 	        ££   srv  prtn  cals type
 NB. Carbs
 rice =:           13,   83,  4.7,  211,  CARBS
 cocopops =:       1.5,  10,  1.7,  117,  CARBS
