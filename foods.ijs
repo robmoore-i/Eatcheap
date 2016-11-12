@@ -51,6 +51,7 @@ milk =:           1,    11 , 6.8,  138,  FAT
 peanutbutter =:   1,    8.5, 10 ,  248,  FAT
 sunfloweroil =:   0.6,  30,  0,    135,  FAT
 butter =:         0.7,  25,  0.06, 74,   FAT
+margerine =:      1.15, 50,  0.05, 62,   FAT 
 
 NB. Fruit and Veg
 carrots =:        0.35, 2,   1.5,  105,  FRUITVEG
