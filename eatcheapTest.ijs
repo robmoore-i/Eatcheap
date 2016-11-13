@@ -21,11 +21,17 @@ testfood =. 1 2 20 0 0
 (proteinPerPound testfood) shouldEqual 40
 )
 
-canCorrectlyCombineFoodsIntoMeals =: 0 : 0
+canCombineFoodsIntoMeals =: 0 : 0
 testfood1 =. 1 2 5 200 0
 testfood2 =. 2 5 10 50 1
 'canCorrectlyCombineFoodsIntoMeals'
 (meal (2 of testfood1) and testfood2) shouldEqual (1.4 1 20 450 4)
+)
+
+canExtendFoods =: 0 : 0
+testfood =. 1 2 5 200 0
+'canExtendFoods'
+(extendfood testfood) shouldEqual (1 2 5 200 0 0.5 10 400)
 )
 
 jt =: runTests canCalculatePoundsPerServing ; canCalculateCaloriesPerPound ; canCalculateProteinPerPound ; canCorrectlyCombineFoodsIntoMeals
