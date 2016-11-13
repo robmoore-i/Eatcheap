@@ -1,5 +1,5 @@
 # Eatcheap
-I currently eat for less than £4 per day while living in central London as a person who requires a certain amount of protein and calories every day. This is surely what computers were made for.
+Helps you track how many calories and grams of protein you're eating and also tells you how much it's costing you and how efficiently you are getting those calories and grams of protein.
 
 # Build instructions (from scratch):
 
