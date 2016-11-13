@@ -31,7 +31,7 @@ testfood2 =. 2 5 10 50 1
 canExtendFoods =: 0 : 0
 testfood =. 1 2 5 200 0
 'canExtendFoods'
-(extendfood testfood) shouldEqual (1 2 5 200 0 0.5 10 400)
+(extendfoodstats testfood) shouldEqual (1 2 5 200 0 0.5 10 400)
 )
 
 jt =: runTests canCalculatePoundsPerServing ; canCalculateCaloriesPerPound ; canCalculateProteinPerPound ; canCombineFoodsIntoMeals ; canExtendFoods
