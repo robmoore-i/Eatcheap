@@ -58,12 +58,12 @@ data =: <@:,."1@:".
 
 tablebody =: columnlabels , rowlabels , data
 
-adjusttokens =: 'extendfood ' , ';' ,~ ]
+adjusttokens =: ';' ,~ ]
 parseinput =: ([ ;. _2) @: adjusttokens
 
 maketable =: (tabledimensions $ tablebody) @: parseinput
 
-with =: [ , ';' , 'extendfood ' , ]
+with =: [ , ';' , ]
 
 cereals =: 'cocopops' with 'cornflakes' with 'alpen'
 
