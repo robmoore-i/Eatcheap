@@ -46,6 +46,7 @@ chailatte =:      extendfoodstats (1.4,  12,  1.5,  90,   PROTEIN)
 chickenthighs =:  extendfoodstats (2.25, 2,   45.1, 588,  PROTEIN)
 sardines =:       extendfoodstats (0.44, 1,   21.3, 239,  PROTEIN)
 chickenwings =:   extendfoodstats (1.25, 5,   21.4, 224,  PROTEIN)
+chickenfillet =:  extendfoodstats (3,    2,   48,   212,  PROTEIN)
 
 NB. Fats
 milk =:           extendfoodstats (1,    11 , 6.8,  138,  FAT)
