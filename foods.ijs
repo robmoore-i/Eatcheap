@@ -1,26 +1,22 @@
 NB. =============== Food class =======================
 
-NB. Accessor methods, each one is named "per *whatever the measure is usually considered in terms of*"
+NB. =============== Accessor methods ============
 NB. £££ per unit
-pounds =: 0&{
+poundsPerUnit =: 0&{
 NB. Servings per unit
-servings =: 1&{
+servingsPerUnit =: 1&{
 NB. Protein per serving
-protein =: 2&{
+proteinPerServing =: 2&{
 NB. Calories per serving
-calories =: 3&{
+caloriesPerServing =: 3&{
 NB. The FoodType
-constituentType =: 4&{
-
-NB. =============== Simple methods on foods ============
+foodtype =: 4&{
 NB. £££ per serving
-poundsPerServing =: pounds % servings
-
+poundsPerServing =: poundsPerUnit % servingsPerUnit
 NB. Calories per £££
-caloriesPerPound =: calories % poundsPerServing
-
+caloriesPerPound =: caloriesPerServing % poundsPerServing
 NB. Protein per £££
-proteinPerPound =: protein % poundsPerServing
+proteinPerPound =: proteinPerServing % poundsPerServing
 
 NB. =============== Constructor ============
 extendfoodstats =: ] ,  (poundsPerServing , proteinPerPound , caloriesPerPound)

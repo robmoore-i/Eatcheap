@@ -22,8 +22,8 @@ NB. If I for example have 4 slices of bread with 2 servings of peanutbutter and 
 NB. meal =: (4 of brownbread) and (2 of peanutbutter) and (2 of butter)
 NB. This meal is amazingly efficient by the way. It's stats are 0.479529 1 30.12 864
 
-NB.                  £££ per serving      srv      protein          calories      foodType (mixture)
-meal =: ,&4 @: ((+/ @: poundsPerServing) , 1 , (+/ @: protein) , (+/ @: calories)) NB. 4
+NB.                  £££ per serving      srv          protein                        calories         foodType (mixture)
+meal =: ,&4 @: ((+/ @: poundsPerServing) , 1 , (+/ @: proteinPerServing) , (+/ @: caloriesPerServing)) NB. 4
 
 of =: #"0
 
