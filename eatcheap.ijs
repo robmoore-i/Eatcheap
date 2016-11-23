@@ -2,15 +2,6 @@ jhome =: jpath '~user'
 
 0!:1 < jhome , '/projects/eatcheap/foods.ijs'
 
-NB. =============== FoodType objects (An enum basically) =======================
-NB. Main macronutrient of the food
-CARBS =: 0
-PROTEIN =: 1
-FAT =: 2
-SUGAR =: 3
-MIXTURE =: 4
-FRUITVEG =: 5
-
 NB. =============== Meal objects =======================
 
 NB. Usage example: basicchilli =: meal rice and mince and onions and tomatosauce
@@ -22,8 +13,7 @@ NB. If I for example have 4 slices of bread with 2 servings of peanutbutter and 
 NB. meal =: (4 of brownbread) and (2 of peanutbutter) and (2 of butter)
 NB. This meal is amazingly efficient by the way. It's stats are 0.479529 1 30.12 864
 
-NB.                  £££ per serving      srv          protein                        calories         foodType (mixture)
-meal =: ,&4 @: ((+/ @: poundsPerServing) , 1 , (+/ @: proteinPerServing) , (+/ @: caloriesPerServing)) NB. 4
+meal =: extendfoodstats @: ((+/ @: poundsPerServing) , 1 , (+/ @: proteinPerServing) , (+/ @: caloriesPerServing))
 
 of =: #"0
 
@@ -41,9 +31,9 @@ bowlofalpen =: bowlofcereal alpen
 NB. =============== Sandwich =======================
 
 NB. Making a sandiwich
-sandwich =: meal @: ((2 of brownbread)&and)
+sandwich =: [: meal ] and~ 2 of [
 
-peanutbutterAndButterSandwich =: sandwich peanutbutter and butter
+tastysandwich =: brownbread sandwich peanutbutter and butter
 
 NB. =============== Tabling functions =======================
 
@@ -51,7 +41,7 @@ tabledimensions =: 2&,@:(>:@:#)
 
 columnlabels =: [: <;._2 [: , [: ,&';'"1 'name' , ]
 
-rowlabelnames =: 'unit price;servings/unit;protein (g)/serving;calories/serving;food type;pounds/serving;protein/pound;calories/pound;'
+rowlabelnames =: 'unit price;servings/unit;protein (g)/serving;calories/serving;pounds/serving;protein/pound;calories/pound;'
 rowlabels =: (< ([ ;. _2) rowlabelnames)
 
 data =: <@:,."1@:".
