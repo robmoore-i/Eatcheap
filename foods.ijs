@@ -42,6 +42,7 @@ chickenthighs =:  extendfoodstats (2.25, 2,   45.1, 588)
 sardines =:       extendfoodstats (0.44, 1,   21.3, 239)
 chickenwings =:   extendfoodstats (1.25, 5,   21.4, 224)
 chickenfillet =:  extendfoodstats (3,    2,   48,   212)
+drumsticks =:     extendfoodstats (1.25, 2,   53.6, 373)
 
 NB. Fats
 milk =:           extendfoodstats (1,    11 , 6.8,  138)
