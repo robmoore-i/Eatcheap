@@ -1,6 +1,4 @@
-jhome =: jpath '~user'
-
-0!:1 < jhome , '/projects/eatcheap/foods.ijs'
+load 'j/Eatcheap/foods.ijs'
 
 NB. =============== Meal objects =======================
 
