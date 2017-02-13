@@ -1,6 +1,8 @@
 # Eatcheap
 Helps you track how many calories and grams of protein you're eating and also tells you how much it's costing you and how efficiently you are getting those calories and grams of protein.
 
+NOTE: THIS REPO HAS BEEN REPLACED! See: https://github.com/robknows/mealplanner for the updated Kdb/Q/J solution.
+
 # Build instructions (from scratch):
 
 1. Go to http://www.jsoftware.com/stable.htm and download J804 for your operating system
